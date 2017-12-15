@@ -134,7 +134,7 @@ class PHPUnit_Extensions_Database_DB_DefaultDatabaseConnection implements PHPUni
             $query .= " WHERE {$whereClause}";
         }
 
-        return (int) $this->connection->query($query)->fetchColumn();
+        return (int) $this->getConnection()->query($query)->fetchColumn();
     }
 
     /**
